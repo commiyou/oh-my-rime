@@ -1,0 +1,108 @@
+# https://gist.github.com/bennyyip/a2ea29aac1f86a759a85f9621f6fbdd7
+patch:
+  preset_color_schemes/minimal:   # 仿 Google Keyboard
+    name:                         极简 / Minimal
+    author:                       BenYip <yebenmy@protonmail.com>
+    text_color:                   0xff666666
+    candidate_text_color:         0xff000000
+    back_color:                   0xffeef1e7
+    border_color:                 0xffeef1e7
+    hilited_text_color:           0xff000000
+    hilited_back_color:           0xffFFFFFF
+    hilited_candidate_text_color: 0xffFFFFFF
+    hilited_candidate_back_color: 0xff3975CE
+
+  style/window: # 隐藏ㄓ
+    - {start: "", move: '', end: ""}
+    - {start: "", composition: "%s", end: "", letter_spacing: 0 } #letter_spacing需要Android5.0。TODO: 不爲0時，會導致不換行的問題
+    - {start: "\n", label: "%s.", candidate: "%s", comment: " %s", end: "", sep: " "}
+
+  preset_keyboards/qwerty/height: 45
+  style/candidate_text_size:      18
+  style/key_height:               18
+  style/show_comment:             false
+  style/key_size:                 12
+  style/key_text_size:            18
+  style/vertical_gap:             0.8
+  style/vertical_correction:      -5
+
+  # 翻譯到英文
+  preset_keys:
+
+    # 安卓
+    BRIGHTNESS_DOWN: {label: 亮度-,  send: BRIGHTNESS_DOWN}
+    BRIGHTNESS_UP:   {label: 亮度+,  send: BRIGHTNESS_UP}
+    CALCULATOR:      {label: 計算機, send: CALCULATOR}
+    CALENDAR:        {label: 日曆,   send: CALENDAR}
+    CONTACTS:        {label: 電話簿, send: CONTACTS}
+    ENVELOPE:        {label: 信箱,   send: ENVELOPE}
+    EXPLORER:        {label: 瀏覽器, send: EXPLORER}
+    MUSIC:           {label: 音樂,   send: MUSIC}
+    POWER:           {label: 電源,   send: POWER}
+    SEARCH:          {label: 搜尋,   send: Find}
+    SLEEP:           {label: 休眠,   send: SLEEP}
+    VOICE_ASSIST:    {label: 語音,   send: VOICE_ASSIST}
+    VOLUME_DOWN:     {label: 音量-,  send: VOLUME_DOWN}
+    VOLUME_UP:       {label: 音量+,  send: VOLUME_UP}
+    VOLUME_MUTE:     {label: 靜音,   send: VOLUME_MUTE}
+
+    # 編輯
+    Shift_L:    {label:      ⇪,  send:       Shift_L}
+    Return:     {label:      ↵,  send:       Return}
+    Hide:       {label:      ⟀,      send:       BACK}
+    BackSpace:  {label:      ←,      repeatable: true, send:  BackSpace}
+    space:      {repeatable: false,  functional: false, send: space}
+    Clear:      {label:      CLR,    send:       Clear}
+    Escape:     {label:      Esc,    send:       Escape}
+    Home:       {label:      HOME,   send:       Home}
+    Insert:     {label:      INS,    send:       Insert}
+    Delete:     {label:      Delete, send:       Delete}
+    End:        {label:      END,    send:       End}
+    Page_Up:    {label:      PgUp,   send:       Page_Up}
+    Page_Down:  {label:      PgDn,   send:       Page_Down}
+    Left:       {label:      '←',    send:       Left}
+    Down:       {label:      '↓',    send:       Down}
+    Up:         {label:      '↑',    send:       Up}
+    Right:      {label:      '→',    send:       Right}
+    select_all: {label:      ' ',    send:       Control+a}
+    cut:        {label:      ' ',    send:       Control+x}
+    copy:       {label:      ' ',    send:       Control+c}
+    paste:      {label:      ' ',    send:       Control+v}
+
+    # rime組合鍵
+    F4:                     {label: schemas,   send: F4}
+    BackToPreviousSyllable: {label: 刪音節,    send: Control+BackSpace}
+    CommitRawInput:         {label: " ",       send: Control+Return}
+    CommitScriptText:       {label: " ",       send: Shift+Return}
+    CommitComment:          {label: " ",       send: Control+Shift+Return}
+    DeleteCandidate:        {label: kill word, send: Control+Delete}
+
+    # rime狀態
+    Mode_switch:     {toggle: ascii_mode,       send: Mode_switch, states: [ ㄓ,   ㄓ ]}
+    Zenkaku_Hankaku: {toggle: full_shape,       send: Mode_switch, states: [ Half, Full ]}
+    Henkan:          {toggle: simplification,   send: Mode_switch, states: [ TC,   SC ]}
+    Charset_switch:  {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增廣 ]}
+    Punct_switch:    {toggle: ascii_punct,      send: Mode_switch, states: [ 。，, ．， ]}
+
+    # trime設定
+    IME_switch:       {label: 下一輸入法,  send: LANGUAGE_SWITCH, select: .next}
+    IME_last:         {label: 上一輸入法,  send: LANGUAGE_SWITCH, select: .last}
+    Keyboard_symbols: {label: 。，,        send: Eisu_toggle,     select: symbols}
+    Keyboard_number:  {label: 123,         send: Eisu_toggle,     select: number}
+    Keyboard_letter:  {label: Aa,          send: Eisu_toggle,     select: default}
+    Keyboard_default: {label: back,        send: Eisu_toggle,     select: .default}
+    Keyboard_switch:  {label: keyboard,    send: Eisu_toggle,     select: .next}
+    Schema_switch:    {label: next schema, send: Control+Shift+1}
+    Color_switch:     {label: color,       send: PROG_RED}
+    Help:             {label: help,        send: Help}
+    Info:             {label: info,        send: INFO}
+    Menu:             {label: " ",         send: Menu}
+    Settings:         {label: settings,    send: SETTINGS}
+    Color_settings:   {label: color,       send: SETTINGS,        option: "color"}
+    Theme_settings:   {label: theme,       send: SETTINGS,        option: "theme"}
+    Schema_settings:  {label: schema,      send: SETTINGS,        option: "schema"}
+
+    # trime命令
+    Date:  {label: " ",   send:  function, command: date, option:  "yyyy-MM-dd"}
+    Time:  {label: " ",   send:  function, command: date, option:  "HH:mm:ss"}
+    Tieba: {label: tieba, send: function,  command: run,  option: "com.baidu.tieba"}
