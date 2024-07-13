@@ -1,108 +1,159 @@
-# https://gist.github.com/bennyyip/a2ea29aac1f86a759a85f9621f6fbdd7
+customization:
+  distribution_code_name: ""
+  distribution_version: ""
+  rime_version: 1.2.9
 patch:
-  preset_color_schemes/minimal:   # 仿 Google Keyboard
-    name:                         极简 / Minimal
-    author:                       BenYip <yebenmy@protonmail.com>
-    text_color:                   0xff666666
-    candidate_text_color:         0xff000000
-    back_color:                   0xffeef1e7
-    border_color:                 0xffeef1e7
-    hilited_text_color:           0xff000000
-    hilited_back_color:           0xffFFFFFF
-    hilited_candidate_text_color: 0xffFFFFFF
-    hilited_candidate_back_color: 0xff3975CE
+  "style/keyboards": [google_qwerty, google_number, symbols_4row]
+  "style/hanb_font": HanaMinB.ttf
+  "style/color_scheme": google
+  "style/horizontal_gap": 4
+  "style/vertical_gap": 8
+  "style/round_corner": 16
 
-  style/window: # 隐藏ㄓ
-    - {start: "", move: '', end: ""}
-    - {start: "", composition: "%s", end: "", letter_spacing: 0 } #letter_spacing需要Android5.0。TODO: 不爲0時，會導致不換行的問題
-    - {start: "\n", label: "%s.", candidate: "%s", comment: " %s", end: "", sep: " "}
+  # Floating window styles.
+  # Enable "Show floating window when composing" to use.
+  "style/horizontal": true
+  "style/layout/position": left
+  "style/layout/min_length": 1
+  "style/layout/max_length": 36
+  "style/layout/max_entries": 3
+  "style/layout/sticky_lines": 0
+  "style/layout/max_width": 930
+  "style/layout/margin_x": 0
+  "style/layout/margin_y": 0
+  "style/layout/border": 0
+  "style/layout/round_corner": 3
+  "style/layout/elevation": 8
+  "style/layout/alpha": 0xff
+  "style/layout/line_spacing_multiplier": 1
+  "style/window":
+    - {candidate: "%s ", comment: "%s "}
 
-  preset_keyboards/qwerty/height: 45
-  style/candidate_text_size:      18
-  style/key_height:               18
-  style/show_comment:             false
-  style/key_size:                 12
-  style/key_text_size:            18
-  style/vertical_gap:             0.8
-  style/vertical_correction:      -5
+  # Keyboard layouts.
+  "preset_keys/BackSpace/label": '⌫'
+  "preset_keys/Return/label": '⏎'
+  "preset_keys/Keyboard_google_number": {label: '123', send: Eisu_toggle, select: google_number}
+  "preset_keys/Keyboard_symbols_4row": {label: '!?#', send: Eisu_toggle, select: symbols_4row}
+  "preset_keyboards/google_qwerty":
+    name: "Google QWERTY"
+    author: "wzyboy"
+    ascii_mode: 0
+    width: 10
+    height: 52
+    keys:
+      # row 1
+    - {click: 'q', swipe_down: '1', hint: '1'}
+    - {click: 'w', swipe_down: '2', hint: '2'}
+    - {click: 'e', swipe_down: '3', hint: '3'}
+    - {click: 'r', swipe_down: '4', hint: '4'}
+    - {click: 't', swipe_down: '5', hint: '5'}
+    - {click: 'y', swipe_down: '6', hint: '6'}
+    - {click: 'u', swipe_down: '7', hint: '7'}
+    - {click: 'i', swipe_down: '8', hint: '8'}
+    - {click: 'o', swipe_down: '9', hint: '9'}
+    - {click: 'p', swipe_down: '0', hint: '0'}
+      # row 2
+    - {width: 5}
+    - {click: 'a', swipe_down: '@', hint: '@'}
+    - {click: 's', swipe_down: '*', hint: '*'}
+    - {click: 'd', swipe_down: '+', hint: '+'}
+    - {click: 'f', swipe_down: '-', hint: '-'}
+    - {click: 'g', swipe_down: '=', hint: '='}
+    - {click: 'h', swipe_down: '/', hint: '/'}
+    - {click: 'j', swipe_down: '#', hint: '#'}
+    - {click: 'k', swipe_down: '(', hint: '('}
+    - {click: 'l', swipe_down: ')', hint: ')'}
+    - {width: 5}
+      # row 3
+    - {click: Shift_L, send_bindings: false, width: 15}
+    - {click: 'z', swipe_down: "'", hint: "'"}
+    - {click: 'x', swipe_down: ':', hint: ':'}
+    - {click: 'c', swipe_down: '"', hint: '"'}
+    - {click: 'v', swipe_down: '?', hint: '?'}
+    - {click: 'b', swipe_down: '~', hint: '~'}
+    - {click: 'n', swipe_down: '!', hint: '!'}
+    - {click: 'm', swipe_down: "…", hint: '…'}
+    - {click: BackSpace, width: 15}
+      # row 4
+    - {click: Keyboard_symbols_4row, long_click: Keyboard_google_number, width: 15}
+    - {click: ',', long_click: Color_settings, label: '，'}
+    - {click: Hide, long_click: Settings}
+    - {click: space, width: 40}
+    - {click: '.', long_click: '…', label: '。'}
+    - {click: Return, width: 15}
+  "preset_keyboards/google_number":
+    name: "Google Number"
+    author: "wzyboy"
+    width: 20
+    height: 52
+    keys:
+      # row 1
+    - {click: '+'}
+    - {click: '1'}
+    - {click: '2'}
+    - {click: '3'}
+    - {click: '#'}
+      # row 2
+    - {click: '-'}
+    - {click: '4'}
+    - {click: '5'}
+    - {click: '6'}
+    - {click: space}
+      # row 3
+    - {click: '*'}
+    - {click: '7'}
+    - {click: '8'}
+    - {click: '9'}
+    - {click: BackSpace}
+      # row 4
+    - {click: Keyboard_default}
+    - {click: ',', width: 10}
+    - {click: Keyboard_symbols_4row, width: 10}
+    - {click: '0'}
+    - {click: '=', width: 10}
+    - {click: '.', width: 10}
+    - {click: Return, width: 20}
+  "preset_keyboards/symbols_4row":
+    name: "Symbol Keyboard, 4 rows"
+    author: "wzyboy"
+    ascii_mode: 0
+    width: 10
+    height: 52
+    keys:
+    - {click: '~',long_click: '`'}
+    - {click: '!'}
+    - {click: '@'}
+    - {click: '#'}
+    - {click: '$'}
+    - {click: '￥'}
+    - {click: '%'}
+    - {click: '^'}
+    - {click: '&'}
+    - {click: '*'}
+    - {click: '(', long_click: '{'}
+    - {click: ')', long_click: '}'}
+    - {click: '[', long_click: '【'}
+    - {click: ']', long_click: '】'}
+    - {click: '「', long_click: '『'}
+    - {click: '」', long_click: '』'}
+    - {click: '、', ascii: '\', long_click: '|'}
+    - {click: '/', long_click: '√'}
+    - {click: ':'}
+    - {click: ';'}
+    - {click: '+'}
+    - {click: '-', long_click: '_'}
+    - {click: '='}
+    - {click: '〈', long_click: '《', ascii: '<'}
+    - {click: '〉', long_click: '》', ascii: '>'}
+    - {click: '“', ascii: '"', long_click: '‘'}
+    - {click: '”', ascii: "'", long_click: '’'}
+    - {click: '，', ascii: ','}
+    - {click: '？', ascii: '?'}
+    - {click: BackSpace}
+    - {click: Keyboard_default, width: 15}
+    - {click: Keyboard_google_number}
+    - {click: space, width: 40}
+    - {click: '。', ascii: '.'}
+    - {click: Hide}
+    - {click: Return, width: 15}
 
-  # 翻譯到英文
-  preset_keys:
-
-    # 安卓
-    BRIGHTNESS_DOWN: {label: 亮度-,  send: BRIGHTNESS_DOWN}
-    BRIGHTNESS_UP:   {label: 亮度+,  send: BRIGHTNESS_UP}
-    CALCULATOR:      {label: 計算機, send: CALCULATOR}
-    CALENDAR:        {label: 日曆,   send: CALENDAR}
-    CONTACTS:        {label: 電話簿, send: CONTACTS}
-    ENVELOPE:        {label: 信箱,   send: ENVELOPE}
-    EXPLORER:        {label: 瀏覽器, send: EXPLORER}
-    MUSIC:           {label: 音樂,   send: MUSIC}
-    POWER:           {label: 電源,   send: POWER}
-    SEARCH:          {label: 搜尋,   send: Find}
-    SLEEP:           {label: 休眠,   send: SLEEP}
-    VOICE_ASSIST:    {label: 語音,   send: VOICE_ASSIST}
-    VOLUME_DOWN:     {label: 音量-,  send: VOLUME_DOWN}
-    VOLUME_UP:       {label: 音量+,  send: VOLUME_UP}
-    VOLUME_MUTE:     {label: 靜音,   send: VOLUME_MUTE}
-
-    # 編輯
-    Shift_L:    {label:      ⇪,  send:       Shift_L}
-    Return:     {label:      ↵,  send:       Return}
-    Hide:       {label:      ⟀,      send:       BACK}
-    BackSpace:  {label:      ←,      repeatable: true, send:  BackSpace}
-    space:      {repeatable: false,  functional: false, send: space}
-    Clear:      {label:      CLR,    send:       Clear}
-    Escape:     {label:      Esc,    send:       Escape}
-    Home:       {label:      HOME,   send:       Home}
-    Insert:     {label:      INS,    send:       Insert}
-    Delete:     {label:      Delete, send:       Delete}
-    End:        {label:      END,    send:       End}
-    Page_Up:    {label:      PgUp,   send:       Page_Up}
-    Page_Down:  {label:      PgDn,   send:       Page_Down}
-    Left:       {label:      '←',    send:       Left}
-    Down:       {label:      '↓',    send:       Down}
-    Up:         {label:      '↑',    send:       Up}
-    Right:      {label:      '→',    send:       Right}
-    select_all: {label:      ' ',    send:       Control+a}
-    cut:        {label:      ' ',    send:       Control+x}
-    copy:       {label:      ' ',    send:       Control+c}
-    paste:      {label:      ' ',    send:       Control+v}
-
-    # rime組合鍵
-    F4:                     {label: schemas,   send: F4}
-    BackToPreviousSyllable: {label: 刪音節,    send: Control+BackSpace}
-    CommitRawInput:         {label: " ",       send: Control+Return}
-    CommitScriptText:       {label: " ",       send: Shift+Return}
-    CommitComment:          {label: " ",       send: Control+Shift+Return}
-    DeleteCandidate:        {label: kill word, send: Control+Delete}
-
-    # rime狀態
-    Mode_switch:     {toggle: ascii_mode,       send: Mode_switch, states: [ ㄓ,   ㄓ ]}
-    Zenkaku_Hankaku: {toggle: full_shape,       send: Mode_switch, states: [ Half, Full ]}
-    Henkan:          {toggle: simplification,   send: Mode_switch, states: [ TC,   SC ]}
-    Charset_switch:  {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增廣 ]}
-    Punct_switch:    {toggle: ascii_punct,      send: Mode_switch, states: [ 。，, ．， ]}
-
-    # trime設定
-    IME_switch:       {label: 下一輸入法,  send: LANGUAGE_SWITCH, select: .next}
-    IME_last:         {label: 上一輸入法,  send: LANGUAGE_SWITCH, select: .last}
-    Keyboard_symbols: {label: 。，,        send: Eisu_toggle,     select: symbols}
-    Keyboard_number:  {label: 123,         send: Eisu_toggle,     select: number}
-    Keyboard_letter:  {label: Aa,          send: Eisu_toggle,     select: default}
-    Keyboard_default: {label: back,        send: Eisu_toggle,     select: .default}
-    Keyboard_switch:  {label: keyboard,    send: Eisu_toggle,     select: .next}
-    Schema_switch:    {label: next schema, send: Control+Shift+1}
-    Color_switch:     {label: color,       send: PROG_RED}
-    Help:             {label: help,        send: Help}
-    Info:             {label: info,        send: INFO}
-    Menu:             {label: " ",         send: Menu}
-    Settings:         {label: settings,    send: SETTINGS}
-    Color_settings:   {label: color,       send: SETTINGS,        option: "color"}
-    Theme_settings:   {label: theme,       send: SETTINGS,        option: "theme"}
-    Schema_settings:  {label: schema,      send: SETTINGS,        option: "schema"}
-
-    # trime命令
-    Date:  {label: " ",   send:  function, command: date, option:  "yyyy-MM-dd"}
-    Time:  {label: " ",   send:  function, command: date, option:  "HH:mm:ss"}
-    Tieba: {label: tieba, send: function,  command: run,  option: "com.baidu.tieba"}
