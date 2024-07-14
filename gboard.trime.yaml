@@ -963,7 +963,7 @@ preset_keyboards:
   #  height: 48
     ascii_mode: 0
     keys:
-      - {click: 1, long_click: 1, key_back_color: bh1, key_text_color: th1}
+      - {click: 1, long_click: Home, key_back_color: bh1, key_text_color: th1}
       - {click: 2, long_click: 2, key_back_color: bh1, key_text_color: th1}
       - {click: 3, long_click: 3, key_back_color: bh1, key_text_color: th1}
       - {click: 4, long_click: 4, key_back_color: bh1, key_text_color: th1}
@@ -972,7 +972,7 @@ preset_keyboards:
       - {click: 7, long_click: 7, key_back_color: bh1, key_text_color: th1}
       - {click: 8, long_click: 8, key_back_color: bh1, key_text_color: th1}
       - {click: 9, long_click: 9, key_back_color: bh1, key_text_color: th1}
-      - {click: 0, long_click: 0, key_back_color: bh1, key_text_color: th1}
+      - {click: 0, long_click: End, key_back_color: bh1, key_text_color: th1}
 
       - {click: q, long_click: '%', key_back_color: bh1, key_text_color: th1}
       - {click: w, long_click: '\', key_back_color: bh1, key_text_color: th1}
@@ -1008,10 +1008,10 @@ preset_keyboards:
       - {click: BackSpace, width: 15, key_back_color: bbs, key_text_color: tbs}
 
       - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn}
-      - {click: ',', label: '，', long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
+      - {click: ',', label: ',', long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
       - {click: Mode_switch, long_click: Theme_settings, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
       - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
-      - {click: '.', label: '。', long_click: liquid_keyboard_clipboard, key_back_color: bh4, key_text_color: th4}
+      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, key_back_color: bh4, key_text_color: th4}
       - {click: '/', long_click: liquid_keyboard_switch , key_text_size: "18", key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: Escape, width: 15, key_back_color: benter, key_text_color: tenter}
 
@@ -1305,7 +1305,6 @@ preset_keys:
   liquid_keyboard_switch: { label: 更多, send: function, command: liquid_keyboard, option: "特殊" }
   liquid_keyboard_switch2: { toggle: _liquid_keyboard, send: Mode_switch, states: [ 更多, 更多 ] }
   liquid_keyboard_tabs: { label: 更多, send: function, command: liquid_keyboard, option: "更多" }
-  liquid_keyboard_emoji: { label: 🙂, send: function, command: liquid_keyboard, option: "emoji" }
   liquid_keyboard_clipboard: { label: 剪贴, send: function, command: liquid_keyboard, option: "剪贴" }
   # rime状态
   Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 中文, 西文 ]}
