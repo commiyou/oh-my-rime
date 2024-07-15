@@ -1012,7 +1012,6 @@ preset_keyboards:
       - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
       - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
-      - {click: '/', long_click: liquid_keyboard_switch , key_text_size: "18", key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
   letter:
@@ -1073,7 +1072,6 @@ preset_keyboards:
       - {click: Mode_switch, long_click: Theme_settings, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
       - {label: '______', click: space, long_click: space_R2, swipe_left: "Left", swipe_right: "Right", swipe_up: Keyboard_fbj, width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '。', long_click: Keyboard_kao, key_back_color: bh4, key_text_color: th4}
-      - {click: space_R2, long_click: liquid_keyboard_switch, key_text_size: "18", key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: Escape, width: 15, key_back_color: benter, key_text_color: tenter}
 
   number:
