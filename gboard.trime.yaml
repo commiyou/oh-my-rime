@@ -1009,16 +1009,16 @@ preset_keyboards:
       - {click: x, long_click: '"', swipe_down: cut, swipe_up: cut_all, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
       - {click: c, long_click: '.', swipe_down: copy, swipe_up: copy_all, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
       - {click: v, long_click: ':', swipe_down: paste, swipe_up: share_text, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
-      - {click: n, long_click: '!', key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: b, long_click: ';', swipe_down: "\\", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
+      - {click: n, long_click: '!', key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: m, long_click: '?', swipe_down: "|", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: BackSpace, swip_left: Escape, width: 15, key_back_color: bbs, key_text_color: tbs, key_symbol_offset_x: 9}
 
       - {click: Keyboard_number, long_click: Menu, width: 15, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15}
-      - {click: ',', label: ',', long_click: '<>{Left}', width: 12, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
-      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 12, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
-      - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 34, key_back_color: bkg, key_text_color: tkg}
-      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, width: 12, key_back_color: bh4, key_text_color: th4}
+      - {click: ',', label: ',', long_click: '<>{Left}', width: 10, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
+      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 10, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
+      - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 40, key_back_color: bkg, key_text_color: tkg}
+      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, width: 10, key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
   letter:
