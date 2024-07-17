@@ -1,4 +1,5 @@
 # 注意，一个文件中只能有一个 patch
 patch:
+  "menu/page_size": 100
   schema_list:
     - schema: rime_mint            # 薄荷拼音

@@ -70,8 +70,8 @@ style:
     all_phrases: false #显示所有长词
   window: #悬浮窗口组件
 #    - {start: "", move: 'ㄓ ', end: ""}
-    - {start: "", composition: "%s", end: "", letter_spacing: 0.12} #letter_spacing需要Android5.0
-    - {start: "\n", label: "%s.", candidate: "%s", comment: "%s", end: "", sep: "☁️️"}
+    - {start: "", composition: "%s", end: "", letter_spacing: 0.15} #letter_spacing需要Android5.0
+    - {start: "\n", label: "%s.", candidate: "%s", comment: "%s", end: "", sep: " "}
   key_font: symbol.ttf #键盘字体
   key_height: *jpgd4 #键高
   key_long_text_size: 16 #长标签字号
@@ -85,6 +85,8 @@ style:
   locale: zh_CN #缺省语言 zh_TW,zh_CN,zh_HK,""
   keyboard_height: 250 #锁定键盘高度，避免切换时键盘高度变化而造成闪烁
   keyboard_height_land: 200 #锁定横屏下键盘高度，避免切换时键盘高度变化而造成闪烁
+  keyboard_padding_bottom: -6
+  keyboard_padding_land_bottom: -6
   preview_font: latin.ttf #按键提示字体
   preview_height: 56 #按键提示高度
   preview_offset: -32 #按键提示纵向偏移
@@ -95,7 +97,7 @@ style:
   shadow_radius: 0.0 #按键阴影半径
   speech_opencc_config: none #语音输入简繁转换
   symbol_font: symbol.ttf #符号字体
-  symbol_text_size: 10 #符号字号
+  symbol_text_size: 11 #符号字号
   text_font: latin.ttf #编码字体
   #text_height: 32 #编码区高度
   text_size: 14 #编码区字号
@@ -109,7 +111,7 @@ style:
     pre:  上个
     search: 搜索
     send: 发送
-    default: Enter   # 定义默认Enter键的文本
+    default: →   # 定义默认Enter键的文本
 
 # 最好保留一项，防止其他主题使用 __include 时无法加载
 fallback_colors:
@@ -882,7 +884,7 @@ liquid_keyboard:
   vertical_gap: 8     #纵向按键间隙
   margin_x: 2       #左右按键间隙的1/2
   fixed_key_bar: # 固定按键条
-    position: bottom  # 摆放位置（在滚动区域的……） top|bottom|left|right
+    position: right  # 摆放位置（在滚动区域的……） top|bottom|left|right
     keys: # 按键（显示名称为对应的label，不能放太多）
       - liquid_keyboard_exit
       - space1
@@ -894,6 +896,10 @@ liquid_keyboard:
   tabs:
     name: 更多
     type: TABS
+  exit:
+    name: " ▾ "
+    type: NO_KEY
+    keys: EXIT
   candidate:
     name: 候选
     type: CANDIDATE
@@ -958,60 +964,61 @@ liquid_keyboard:
 preset_keyboards:
   default:
     author: "暖暖"
-    name: 26键默认布局
+    name: 36键默认布局
     width: 10
-  #  height: 48
+    #  height: 48
     ascii_mode: 0
+    #reset_ascii_mode: true
     keys:
-      - {click: 1, long_click: Home, key_back_color: bh1, key_text_color: th1}
-      - {click: 2, long_click: Page_Up, key_back_color: bh1, key_text_color: th1}
-      - {click: 3, long_click: 3, key_back_color: bh1, key_text_color: th1}
-      - {click: 4, long_click: 4, key_back_color: bh1, key_text_color: th1}
-      - {click: 5, long_click: 5, key_back_color: bh1, key_text_color: th1}
-      - {click: 6, long_click: 6, key_back_color: bh1, key_text_color: th1}
-      - {click: 7, long_click: 7, key_back_color: bh1, key_text_color: th1}
-      - {click: 8, long_click: 8, key_back_color: bh1, key_text_color: th1}
-      - {click: 9, long_click: Page_Down, key_back_color: bh1, key_text_color: th1}
-      - {click: 0, long_click: End, key_back_color: bh1, key_text_color: th1}
+      - {click: 1, long_click: Home, swipe_down: Home, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 2, long_click: Page_Up, swipe_down: Page_Up, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 3, long_click: 3, swipe_down: "3", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 4, long_click: 4, swipe_down: "4", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 5, long_click: 5, swipe_down: "5", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 6, long_click: 6, swipe_down: "6", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 7, long_click: 7, swipe_down: "7", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 8, long_click: 8, swipe_down: "8", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 9, long_click: Page_Down, swipe_down: Page_Down, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 0, long_click: End, swipe_down: End, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
 
-      - {click: q, long_click: '%', key_back_color: bh1, key_text_color: th1}
-      - {click: w, long_click: '\', key_back_color: bh1, key_text_color: th1}
-      - {click: e, long_click: '|', key_back_color: bh1, key_text_color: th1}
-      - {click: r, long_click: '[', key_back_color: bh1,key_text_color: th1}
-      - {click: t, long_click: ']', key_back_color: bh1,key_text_color: th1}
-      - {click: y, long_click: '=', key_back_color: bh1,key_text_color: th1}
-      - {click: u, long_click: '<', key_back_color: bh1,key_text_color: th1}
-      - {click: i, long_click: '>', key_back_color: bh1,key_text_color: th1}
-      - {click: o, long_click: '{', key_back_color: bh1,key_text_color: th1}
-      - {click: p, long_click: '}', key_back_color: bh1,key_text_color: th1}
+      - {click: q, long_click: '%', swipe_down: '%', key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: w, long_click: '\', swipe_down: '\', key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: e, long_click: '|', swipe_down: '|', key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: r, long_click: '[', swipe_down: '[', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: t, long_click: ']', swipe_down: ']', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: y, long_click: '=', swipe_down: '=', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: u, long_click: '<', swipe_down: '<', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: i, long_click: '>', swipe_down: '>', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: o, long_click: '{', swipe_down: '{', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: p, long_click: '}', swipe_down: '}', key_back_color: bh1,key_text_color: th1, key_symbol_offset_x: 9}
 
       - {width: 5, key_back_color: bh2, key_text_color: th2}
-      - {click: a, long_click: '@', key_back_color: bh2, key_text_color: th2, swipe_down: select_all}
-      - {click: s, long_click: '#', key_back_color: bh2, key_text_color: th2}
-      - {click: d, long_click: '$', key_back_color: bh2, key_text_color: th2}
-      - {click: f, long_click: '_', key_back_color: bh2, key_text_color: th2}
-      - {click: g, long_click: '&', swipe_down: "date_time", key_back_color: bh2, key_text_color: th2}
-      - {click: h, long_click: '-',  key_back_color: bh2, key_text_color: th2}
-      - {click: j, long_click: '+',  key_back_color: bh2, key_text_color: th2}
-      - {click: k, long_click: '(',  key_back_color: bh2, key_text_color: th2}
-      - {click: l, long_click: ')',  key_back_color: bh2, key_text_color: th2}
+      - {click: a, long_click: '@', swipe_down: select_all, key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 7, symbol_text_size: 8}
+      - {click: s, long_click: '#', swipe_down: '#', key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: d, long_click: '$', swipe_down: '$', key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: f, long_click: '_', swipe_down: '_', key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: g, long_click: '&', swipe_down: "date_time", key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: h, long_click: '-', swipe_down: '-',  key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: j, long_click: '+', swipe_down: '+',  key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: k, long_click: '(', swipe_down: '(',  key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
+      - {click: l, long_click: ')', swipe_down: ')',  key_back_color: bh2, key_text_color: th2, key_symbol_offset_x: 9}
       - {width: 5, key_back_color: bh2, key_text_color: th2}
 
       - {click: Shift_L, composing: delimiter, width: 15, hilited_key_back_color: benter, key_back_color: bbs, key_text_color: tbs}
-      - {click: z, long_click: '`', swipe_down: undo, swipe_up:: redo, key_back_color: bh3, key_text_color: th3}
-      - {click: x, long_click: '"', swipe_down: cut, swipe_up: cut_all, key_back_color: bh3, key_text_color: th3}
-      - {click: c, long_click: '.', swipe_down: copy, swipe_up: copy_all, key_back_color: bh3, key_text_color: th3}
-      - {click: v, long_click: ':', swipe_down: paste, swipe_up: share_text, key_back_color: bh3, key_text_color: th3}
-      - {click: b, long_click: ';', swipe_down: "\\", key_back_color: bh3, key_text_color: th3}
-      - {click: n, long_click: '!', key_back_color: bh3, key_text_color: th3}
-      - {click: m, long_click: '?', swipe_down: "|", key_back_color: bh3, key_text_color: th3}
-      - {click: BackSpace, swip_left: Escape, width: 15, key_back_color: bbs, key_text_color: tbs}
+      - {click: z, long_click: '`', swipe_down: undo, swipe_up:: redo, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
+      - {click: x, long_click: '"', swipe_down: cut, swipe_up: cut_all, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
+      - {click: c, long_click: '.', swipe_down: copy, swipe_up: copy_all, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
+      - {click: v, long_click: ':', swipe_down: paste, swipe_up: share_text, key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 7, symbol_text_size: 8}
+      - {click: n, long_click: '!', key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
+      - {click: b, long_click: ';', swipe_down: "\\", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
+      - {click: m, long_click: '?', swipe_down: "|", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
+      - {click: BackSpace, swip_left: Escape, width: 15, key_back_color: bbs, key_text_color: tbs, key_symbol_offset_x: 9}
 
-      - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn}
-      - {click: ',', label: ',', long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
-      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
-      - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
-      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
+      - {click: Keyboard_number, long_click: Menu, width: 15, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15}
+      - {click: ',', label: ',', long_click: '<>{Left}', width: 12, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
+      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 12, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
+      - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 34, key_back_color: bkg, key_text_color: tkg}
+      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, width: 12, key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
   letter:
