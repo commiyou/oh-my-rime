@@ -1014,11 +1014,12 @@ preset_keyboards:
       - {click: m, long_click: '?', swipe_down: "|", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: BackSpace, swip_left: Escape, swipe_up: Clear, width: 15, key_back_color: bbs, key_text_color: tbs, key_symbol_offset_x: 9}
 
-      - {click: Keyboard_number, long_click: Menu, width: 15, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15}
-      - {click: ',', label: ',', long_click: '<>{Left}', width: 10, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
-      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 10, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
-      - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 40, key_back_color: bkg, key_text_color: tkg}
-      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, width: 10, key_back_color: bh4, key_text_color: th4}
+      - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15}
+      - {click: ',', label: ',', long_click: '<>{Left}', width: 12.5, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
+      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
+      - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
+      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
+      - {click: '/', long_click: liquid_keyboard_switch , key_text_size: "18", key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
   letter:
@@ -1261,8 +1262,9 @@ preset_keys:
   BackSpace: {label: 退格, preview: '⇦', repeatable: true, functional: false, send: BackSpace}
   space: {repeatable: false, preview: ' ', functional: false, label: '_______', send: space}
   space1: {repeatable: false, label: '空格', functional: false, send: space}
-  Clear: {label: 全清, send: Clear}
-  Escape: {label: 取消, functional: false, send: Escape}
+  Clear: {label: 清除, text: "{Control+a}{BackSpace}"} #全選並刪除
+  # Escape: {label: 取消, functional: false, send: Escape}
+  Escape: {label: Esc, send: Escape}
   Home: {label: 行首, send: Home, functional: false}
   Insert: {label: 插入, send: Insert}
   Delete: {label: 删除, send: Delete, functional: false}
@@ -1275,7 +1277,9 @@ preset_keys:
   Right: {label: '→', send: Right, repeatable: true, functional: false}
   select_all: {label: 全选, functional: false, send: Control+a}
   cut: {label: 剪切, functional: false, send: Control+x}
+  cut_all: {label: 全挪, text: "{Control+a}{Control+x}"} #全選並剪切
   copy: {label: 复制, functional: false, send: Control+c}
+  copy_all: {label: 全謄, text: "{Control+a}{Control+c}"} #全選並複製
   paste: {label: 粘贴, functional: false, send: Control+v}
   paste_clip: {label: 粘贴, send: function, command: clipboard}
   paste_text: {label: 貼上文本, send: Control+Shift+Alt+v} #>=Android 6.0
