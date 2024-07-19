@@ -1,6 +1,6 @@
 patch:
   "schema/name": 拼音
-  "menu/page_size": 30
+  "menu/page_size": 9
   "punctuator/import_preset": symbols.custom
   "switches/@last":
      name: emoji_suggestion
