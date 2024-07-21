@@ -502,7 +502,7 @@ preset_keyboards:
       - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn}
       - {click: ',', label: '，', long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
       - {click: Mode_switch, long_click: Theme_settings, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
-      - {label: '______', click: space, long_click: space_R2, swipe_left: "Left", swipe_right: "Right", swipe_up: Keyboard_fbj, width: 30, key_back_color: bkg, key_text_color: tkg}
+      - {label: '______', click: space, long_click: space_R2, swipe_left: "Left", swipe_right: "Right", width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '。', long_click: Keyboard_kao, key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: Escape, width: 15, key_back_color: benter, key_text_color: tenter}
 
@@ -706,7 +706,6 @@ preset_keys:
   Control_L: {label: "退格", send: Control_L, functional: false}
 
   
-  Keyboard_a3: {label: "……", functional: false, send: asciicircum}
 
   # composing
   C_Left: {label: "", send: Left}
