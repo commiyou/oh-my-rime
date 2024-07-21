@@ -11,13 +11,10 @@ author: commiyou        #作者信息
 
 #键盘高度
 height:
-  1: &jpgd1 30 #表情键盘
-  2: &jpgd2 24 #颜文字键盘1
-  3: &jpgd3 24 #颜文字键盘2
-  4: &jpgd4 48 #主键盘
-  5: &jpgd5 39.5 #符号键盘
-  6: &hgap 4 #键盘横缝大小
-  7: &sgap 8 #键盘竖缝大小
+  1: &jpgd4 48 #主键盘
+  2: &jpgd5 39.5 #符号键盘
+  3: &hgap 4 #键盘横缝大小
+  4: &sgap 8 #键盘竖缝大小
 
 #键盘高度
 round_corner:
@@ -252,6 +249,22 @@ preset_color_schemes:
     text_back_color: 0xcce4e7e9 #編碼區背景
 
 
+  gboard:
+    name: Gboard
+    author: commiyou
+    back_color: 0x1e1a23
+    border_color: 0x1e1a23
+    candidate_separator_color: 0xffffffff
+    candidate_text_color: 0xffffffff
+    comment_text_color: 0xffffffff
+    key_back_color: 0x1e1a23
+    key_border_color: 0x1e1a23
+    key_symbol_color:: 0xffffffff
+    key_text_color:: 0xffffffff
+    keyboard_back_color: 0x1e1a23
+    label_color: 0xff000000 #標籤
+
+
   google:
     name: 谷歌／Google
     author: skoj <skoj@qq.com>
@@ -438,12 +451,12 @@ preset_keyboards:
       - {click: m, long_click: '?', swipe_down: "?", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: BackSpace, swipe_up: Clear, width: 15, key_back_color: bbs, key_text_color: tbs, key_symbol_offset_x: 9}
 
-      - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15, composing: C_Tab}
+      - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15, composing: C_Tab, symbol_text_size:8}
       - {click: ',', label: ',', long_click: '<>{Left}', width: 12.5, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
-      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
+      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home,  key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4, symbol_text_size:8}
       - {click: space, long_click: Mode_switch, swipe_left: Left2, swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
-      - {click: '/', long_click: liquid_keyboard_switch , key_text_size: "18", key_back_color: bh4, key_text_color: th4, composing: C_Clear}
+      - {click: '/', long_click: liquid_keyboard_switch , key_back_color: bh4, key_text_color: th4, composing: C_Clear}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
   letter:
