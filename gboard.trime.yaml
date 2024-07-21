@@ -486,7 +486,7 @@ preset_keyboards:
 
       - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15, composing: C_Tab, symbol_text_size: 8}
       - {click: ',', label: ',', long_click: '<>{Left}', width: 12.5, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
-      - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home,  key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4, symbol_text_size: 8}
+      - {click: Mode_switch1, long_click: Theme_settings, swipe_up: Home,  key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4, symbol_text_size: 8}
       - {click: space, long_click: Mode_switch, swipe_left: Left2, swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
       - {click: '/', long_click: liquid_keyboard_switch , key_back_color: bh4, key_text_color: th4, composing: C_Clear}
@@ -547,7 +547,7 @@ preset_keyboards:
 
       - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn}
       - {click: ',', label: '，', long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
-      - {click: Mode_switch, long_click: Theme_settings, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
+      - {click: Mode_switch, long_click: Theme_settings1, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn}
       - {label: '______', click: space, long_click: space_R2, swipe_left: "Left", swipe_right: "Right", width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '。', key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, swipe_up: Escape, width: 15, key_back_color: benter, key_text_color: tenter}
@@ -702,6 +702,7 @@ preset_keys:
   liquid_keyboard_candidate: { label: 候选, send: function, command: liquid_keyboard, option: "候选" }
   # rime状态
   Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 中文, 西文 ]}
+  Mode_switch1: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ 🌐, 🌐 ]}
   Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半角, 全角 ]}
   Henkan: {toggle: simplification, send: Mode_switch, states: [ 汉字, 汉字 ]}
   Charset_switch: {toggle: extended_charset, send: Mode_switch, states: [ 常用, 增广 ]}
@@ -713,6 +714,7 @@ preset_keys:
   Schema_switch: {label: 下一方案, functional: false, send: Control+Shift+1}
   Schema_Eng: {label: En, functional: true, send: Control+Shift+0}
   Theme_settings: {label: 主题, send: SETTINGS, option: "theme"}
+  Theme_settings1: {label: "", send: SETTINGS, option: "theme"}
   Color_switch: {label: 配色, functional: false, send: PROG_RED}
   Help: {label: 说明, send: Help}
   Info: {label: 关于, send: INFO}
