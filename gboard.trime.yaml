@@ -28,7 +28,7 @@ style:
   background_dim_amount: 0.5
   root_background: keyboard_back_color # 整个键盘区+候选栏的背景图/色
   candidate_font: han.ttf  #候选字体
-  candidate_padding: 5  #候选项内边距
+  candidate_padding: 10  #候选项内边距
   candidate_spacing: 0.5  #候选间距
   candidate_text_size: 18  #候选字号
   candidate_use_cursor: true #高亮候选项
@@ -252,24 +252,50 @@ preset_color_schemes:
   gboard:
     name: Gboard
     author: commiyou
-    back_color: 0x1e1a23
-    border_color: 0x1e1a23
-    candidate_separator_color: 0xffffffff
-    candidate_text_color: 0xffffffff
-    comment_text_color: 0xffffffff
-    key_back_color: 0x1e1a23
-    key_border_color: 0x1e1a23
-    key_symbol_color:: 0xffffffff
-    key_text_color:: 0xffffffff
-    keyboard_back_color: 0x1e1a23
-    # todo
-    label_color: 0xff000000 #標籤
-    text_color: 0xffc8c9ca
-    hilited_text_color: 0xffdd4b39
-    hilited_back_color: 0xffffffff
-    hilited_candidate_text_color: 0xffffffff
-    hilited_comment_text_color: 0xffffffff
-    hilited_candidate_back_color: 0xffdd4b39
+
+    # 候选项
+    back_color: 0x1e1a23 # 候选区背景
+    # candidate_background: 候选区整体背景
+    hilited_candidate_back_color: 0xffd3d7da # 高亮候选背景（候选项被选中时）
+    candidate_separator_color: 0xffffffff # 候选分割线
+    candidate_text_color: 0xffffffff # 候选文本（包括悬浮窗候选，下同）
+    hilited_candidate_text_color: 0xff000000 # 高亮候选文本
+    comment_text_color: 0xffffffff  # 候选项注释
+    hilited_comment_text_color: 0xff000000 # # 高亮候选项注释
+
+    #  悬浮窗口
+    border_color: 0x1e1a23 # 悬浮窗边框
+    label_color: 0xff000000 # 悬浮窗候选项序号
+    hilited_text_color: 0xe1e3e5 # 高亮编码（一般是位于光标插入点左边的编码）
+    hilited_back_color: 0x1e1a23 # 高亮编码背景
+    text_color: 0xe1e3e5 # 编码（位于光标插入点右边的编码，或者是拼音类方案中无法正常解析的空码，比如全拼时输入 hau，u 就属于这种）
+
+
+    # 键盘
+    key_back_color: 0x1e1a23  # 按键背景
+    hilited_key_back_color: 0x3d484a # 高亮按键背景（按下按键时）
+    key_text_color:: 0xffffff # 按键文本（click）
+    hilited_key_text_color: 0xffffff # 高亮按键文本
+    key_symbol_color:: 0xeeeeff  # 按键符号（long_click 和 hint）
+    hilited_key_symbol_color: 0xeeeeff # 高亮按键符号
+    preview_back_color: 0x55bfbfbf # 按键气泡背景
+    preview_text_color: 0xffffff # 按键气泡文本
+    shadow_color: 0xff000000  # 按键文字阴影（阴影半径在shadow_radius中设定）
+    key_border_color: 0x1e1a23 #  按键边框*(暂无)
+    keyboard_back_color: 0x1e1a23  #  键盘背景。即将被 keyboard_background 取代
+    # keyboard_background：键盘背景，铺满候选栏和导航栏（如果有）。可设颜色值或图片路径。
+    # liquid_keyboard_background:liquidKeyboard 的键盘背景
+    # long_text_back_color: 包含长文本的按键背景（比如剪贴板）
+
+    # 功能键
+    off_key_back_color: 0xffd3d7da # 功能键背景
+    hilited_off_key_back_color: 0xffd3d7da # 功能键高亮背景（按下时）
+    off_key_text_color: 0xff000000 # 功能键文本
+    hilited_off_key_text_color: 0xff000000 # 功能键高亮文本
+    on_key_back_color: 0x7ecbc1 #  shift 键锁定时背景
+    hilited_on_key_back_color: 0x7ecbc1 # shift 键锁定时的高亮背景（按下时）
+    on_key_text_color: 0xffffff # shift 键锁定时文本
+    hilited_on_key_text_color: 0xffffff # shift 键锁定时的高亮文本
 
 
   google:
