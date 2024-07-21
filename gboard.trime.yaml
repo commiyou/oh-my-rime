@@ -978,8 +978,8 @@ preset_keyboards:
       - {click: 6, long_click: 6, swipe_down: "6", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
       - {click: 7, long_click: 7, swipe_down: "7", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
       - {click: 8, long_click: 8, swipe_down: "8", key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
-      - {click: 9, long_click: Page_Down, swipe_down: Page_Down, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9, composing: Tab}
-      - {click: 0, long_click: End, swipe_down: End, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9, composing: Tab}
+      - {click: 9, long_click: Page_Down, swipe_down: Page_Down, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
+      - {click: 0, long_click: End, swipe_down: End, key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9, composing: C_DeleteToPrev}
 
       - {click: q, long_click: '%', swipe_down: '%', key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
       - {click: w, long_click: '\', swipe_down: '\', key_back_color: bh1, key_text_color: th1, key_symbol_offset_x: 9}
@@ -1012,14 +1012,14 @@ preset_keyboards:
       - {click: b, long_click: ';', swipe_down: "\\", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: n, long_click: '!', key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
       - {click: m, long_click: '?', swipe_down: "?", key_back_color: bh3, key_text_color: th3, key_symbol_offset_x: 9}
-      - {click: BackSpace, composing: Escape, swip_left: Escape, swipe_up: Clear, width: 15, key_back_color: bbs, key_text_color: tbs, key_symbol_offset_x: 9}
+      - {click: BackSpace, swipe_up: Clear, width: 15, key_back_color: bbs, key_text_color: tbs, key_symbol_offset_x: 9}
 
       - {click: Keyboard_number, long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 15, composing: C_Tab}
       - {click: ',', label: ',', long_click: '<>{Left}', width: 12.5, key_back_color: bh4, key_text_color: th4, key_symbol_offset_x: 9}
       - {click: Mode_switch, long_click: Theme_settings, swipe_up: Home, key_text_size: "18", key_back_color: bgn, key_text_color: tgn, key_symbol_offset_x: 9, key_text_offset_x: 4}
       - {click: space, long_click: Mode_switch, swipe_left: Left2, swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
-      - {click: '/', long_click: liquid_keyboard_switch , key_text_size: "18", key_back_color: bh4, key_text_color: th4, composing: C_DeleteToEnd}
+      - {click: '/', long_click: liquid_keyboard_switch , key_text_size: "18", key_back_color: bh4, key_text_color: th4, composing: C_Clear}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
   letter:
@@ -1392,9 +1392,10 @@ preset_keys:
   C_Up: {label: "", send: Up}
   C_Down: {label: "", send: Down}
   C_DeleteToEnd: {label: "", send: Shift+Delete}
+  C_DeleteToPrev: {label: "DPrev", send: Control+Delete} # 删除至上一个音节
   C_Delete: {label: "", send: Delete}
-  C_Clear: {label: "", send: Escape}
+  C_Clear: {label: "清空", send: Escape}
   C_PageUp: {label: "", send: Page_Up}
   C_PageDown: {label: "", send: Page_Down}
   C_ShiftTab: {label: "", send: Shift+Left}
-  C_Tab: {label: "", send: Shift+Right}
+  C_Tab: {label: "<-", send: Shift+Right}
