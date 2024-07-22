@@ -52,6 +52,7 @@ The default address of the local rime configuration file is as follows
   - Weasel: `%APPDATA%\Rime`
 -Mac OS X
   - Squirrel: `~/Library/Rime`
+  - Fcitx5 macOS: `~/.local/share/fcitx5/rime`
 - Linux
   - iBus: `~/.config/ibus/rime`
   - Fcitx5: `~/.local/share/fcitx5/rime`
@@ -154,7 +155,7 @@ import_tables:
 > Especially rime-ice, this solution project, a large number of references to rime-ice. For the word library part, use Python to synchronize the basic word library of rime-ice and enable the ext extension word library that rime-ice does not enable by default.
 
 ## Other Recommended
-- [98 Wubi, http://www.98wubi.com/](http://www.98wubi.com/)
+- [98 Wubi, http://www.98wubi.com/](https://wubi98.github.io/)
 - [86 Wubi, https://github.com/KyleBing/rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)
 - [Rime Pinyin, an excellent Chinese thesaurus](https://github.com/iDvel/rime-ice)
 

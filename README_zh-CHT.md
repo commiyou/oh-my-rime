@@ -56,6 +56,7 @@ Rime 配置教程：
   - Weasel: `%APPDATA%\Rime`
 - Mac OS X
   - Squirrel: `~/Library/Rime`
+  - Fcitx5 macOS: `~/.local/share/fcitx5/rime`
 - Linux
   - iBus:` ~/.config/ibus/rime`
   - Fcitx5: `~/.local/share/fcitx5/rime`
@@ -155,7 +156,7 @@ import_tables:
 
 ## 推薦項目
 
-- [98五筆，十分好用的98五筆輸入方案](http://www.98wubi.com/)
+- [98五筆，十分好用的98五筆輸入方案](https://wubi98.github.io/)
 - [86五筆極點碼錶，rime上的86五筆方案](https://github.com/KyleBing/rime-wubi86-jidian)
 - [霧凇拼音，很優秀的中文詞庫](https://github.com/iDvel/rime-ice)
 
