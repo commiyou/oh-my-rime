@@ -480,7 +480,7 @@ preset_keyboards:
       - {click: ',', label: ',', long_click: '<>{Left}', width: 12.5, key_back_color: bh4, key_text_color: th4 }
       - {click: Mode_switch, label_symbol: "", long_click: Theme_settings, swipe_up: Home}
       - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
-      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4}
+      - {click: '.', label: '.', long_click: liquid_keyboard_clipboard, swipe_up: End, key_back_color: bh4, key_text_color: th4, composing: C_BackToPreviousSyllable}
       - {click: '/', long_click: liquid_keyboard_switch , key_back_color: bh4, key_text_color: th4, composing: C_Clear}
       - {click: Return, composing: Return1, swipe_up: liquid_keyboard_clipboard, width: 15, key_back_color: benter, key_text_color: tenter}
 
@@ -752,7 +752,7 @@ preset_keys:
   C_Up: {label: "", send: Up}
   C_Down: {label: "", send: Down}
   C_DeleteToEnd: {label: "", send: Shift+Delete}
-  C_DeleteToPrev: {label: "DPrev", send: Control+Delete} # 删除至上一个音节
+  C_BackToPreviousSyllable: {label: "删音节", send: Control+BackSpace} # 删除至上一个音节
   C_Delete: {label: "", send: Delete}
   C_Clear: {label: "清空", send: Escape}
   C_PageUp: {label: "", send: Page_Up}
