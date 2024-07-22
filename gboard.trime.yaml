@@ -362,7 +362,7 @@ liquid_keyboard:
       - Return2
       - liquid_keyboard_clipboard
       - liquid_keyboard_tabs
-  keyboards: [math, ascii, cn, history, clipboard, collection, draft, tabs,  grease, candidate]  #tab列表
+  keyboards: [math, ascii, cn, history, clipboard, collection, draft, tabs,  candidate]  #tab列表
   tabs:
     name: 更多
     type: TABS
@@ -385,10 +385,6 @@ liquid_keyboard:
   draft:
     type: DRAFT
     name: 草稿
-  math:   #tab名称
-    type: SINGLE
-    name: 数学
-    keys: "≈＝≠≌<>≤≥≡()[]{}-+±×*/÷&∥%‰‱°′″∫∮∯∬∭∰∞∑∧∏∈∵∴⊥∝∨∪•√〒∝∽∈∩∧⊙⌒∥∟∣∂∆∞≌∉∪∨⊕⊿⊥∠∫∬∭"  #tab中的按键列表
   cn:
     type: SINGLE
     name: 中文
@@ -422,10 +418,6 @@ liquid_keyboard:
       - 『
       - 』
       - ～
-  grease:
-    type: SINGLE
-    name: 希腊
-    keys: "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω"
   ascii:
     type: SINGLE
     name: 英文
@@ -638,21 +630,21 @@ preset_keys:
   VOLUME_UP: {label: 音量+, send: VOLUME_UP}
   VOLUME_MUTE: {label: 静音, send: VOLUME_MUTE}
   # 编辑
-  Shift_L: {label: Shift, preview: '⇪', functional: false, send: Shift_L}
+  Shift_L: {label: ⇪, preview: '⇪', functional: true, send: Shift_L}
   Return: { label: enter_labels, preview: '↩', functional: false, send: Return }
   Return1: {label: Enter, preview: '↩', functional: false, send: Return}
   Return2: {label: 回车, send: Return }
-  Hide: {label: 隐藏, send: BACK}
-  BackSpace: {label: 退格, preview: '⇦', repeatable: true, functional: false, send: BackSpace}
+  Hide: {label: ⌵, send: BACK}
+  BackSpace: {label: ⌫, preview: '⇦', repeatable: true, functional: true, send: BackSpace}
   space: {repeatable: false, preview: ' ', functional: false, label: '_______', send: space}
   space1: {repeatable: false, label: '空格', functional: false, send: space}
-  Clear: {label: 清除, text: "{Control+a}{BackSpace}"} #全選並刪除
+  Clear: {label: 全清, text: "{Control+a}{BackSpace}"} #全選並刪除
   # Escape: {label: 取消, functional: false, send: Escape}
   Escape: {label: Esc, send: Escape}
-  Home: {label: 行首, send: Home, functional: false}
+  Home: {label: '|<', send: Home, functional: false}
   Insert: {label: 插入, send: Insert}
   Delete: {label: 删除, send: Delete, functional: false}
-  End: {label: 行尾, send: End, functional: false}
+  End: {label: '>|', send: End, functional: false}
   Page_Up: {label: 上页, send: Page_Up, functional: false}
   Page_Down: {label: 下页, send: Page_Down, functional: false}
   Left: {label: '←', send: Left, repeatable: true, functional: false}
