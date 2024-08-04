@@ -101,6 +101,10 @@ patch:
     - derive/([tl])eng$/$1en/ # ten → teng
     - derive/([qwrtypsdfghjklzxcbnm])([aeio])ng$/$1ng/ # lng → lang、leng、ling、long
     - derive/un$/ong/                  # yuntong = yongtong
+    # lv -> lu
+    - derive/([nljqxy])u$/$1v/
+    - derive/([nljqxy])ue$/$1ve/
+    - derive/([jqxy])van$/$1uan/
   'key_binder': # no import_preset
     bindings:
       # - {accept: "Control+Shift+E", toggle: emoji_suggestion, when: always}

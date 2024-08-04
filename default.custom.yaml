@@ -3,3 +3,10 @@ patch:
   "menu/page_size": 100
   schema_list:
     - schema: rime_mint            # 薄荷拼音
+  ascii_composer/good_old_caps_lock: true
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code
+    Shift_L: noop # disable shift切换中英文
+    Shift_R: noop
+    Control_L: noop 
+    Control_R: noop
