@@ -1,0 +1,12 @@
+# 注意，一个文件中只能有一个 patch
+patch:
+  "menu/page_size": 9
+  schema_list:
+    - schema: rime_mint            # 薄荷拼音，全拼
+  ascii_composer/good_old_caps_lock: true
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code
+    Shift_L: noop # disable shift切换中英文
+    Shift_R: noop
+    Control_L: noop 
+    Control_R: noop
