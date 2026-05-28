@@ -2,6 +2,10 @@ patch:
   "schema/name": 拼音
   "menu/page_size": 9
   "punctuator/import_preset": symbols.custom
+  "punctuator/full_shape":
+    "/": { commit: ／ }
+  "punctuator/half_shape":
+    "/": { commit: "/" }
   "engine/processors/@before 0": lua_processor@*english_enter_learner
   "engine/translators/@before 0": lua_translator@*quick_text
   "engine/translators/@before 1": lua_translator@*english_learner
@@ -9,6 +13,10 @@ patch:
   "melt_eng/enable_completion": true
   "speller/algebra/@before 0": derive/^([zcs])h/$1/
   "speller/algebra/@before 1": derive/^([zcs])([^h])/$1h$2/
+  "speller/algebra/@before 2": derive/([aei])n$/$1ng/
+  "speller/algebra/@before 3": derive/([aei])ng$/$1n/
+  "speller/algebra/@before 4": derive/^n/l/
+  "speller/algebra/@before 5": derive/^l/n/
   "switches/@last":
      name: emoji_suggestion
      reset: 0
